@@ -1,0 +1,19 @@
+{
+  "name": "ttsarchiver",
+  "version": "0.0.0",
+  "description": "Archive Tabletop Simulator games from their json files",
+  "main": "ttsarchive.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefankendall/ttsarchiver.git"
+  },
+  "author": "Stefan Kendall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stefankendall/ttsarchiver/issues"
+  },
+  "homepage": "https://github.com/stefankendall/ttsarchiver#readme"
+}
