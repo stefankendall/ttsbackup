@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/stefankendall/ttsarchiver/issues"
   },
-  "homepage": "https://github.com/stefankendall/ttsarchiver#readme"
+  "homepage": "https://github.com/stefankendall/ttsarchiver#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "lodash": "^4.13.1",
+    "mkdirp": "^0.5.1"
+  }
 }
