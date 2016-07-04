@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/stefankendall/ttsarchiver#readme",
   "dependencies": {
+    "async": "^2.0.0-rc.6",
     "commander": "^2.9.0",
     "lodash": "^4.13.1",
-    "mkdirp": "^0.5.1"
+    "lodash-deep": "^2.0.0",
+    "mkdirp": "^0.5.1",
+    "request": "^2.72.0"
   }
 }
