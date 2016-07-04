@@ -19,6 +19,7 @@
   "dependencies": {
     "async": "^2.0.0-rc.6",
     "commander": "^2.9.0",
+    "glob": "^7.0.5",
     "lodash": "^4.13.1",
     "lodash-deep": "^2.0.0",
     "mkdirp": "^0.5.1",
