@@ -2,8 +2,15 @@ var program = require('commander');
 var archive = require('./lib/commands/archive');
 var rewriter = require('./lib/commands/rewrite');
 var mod_lister = require('./lib/commands/mod_lister');
+var interactive_backup = require('./lib/commands/interactive_backup');
 
 program.version('0.0.0');
+
+
+program
+    .command('backup')
+    .description('interactively pick mods to backup to a particular location, create a mod file for tabletop simulator, and add to your installed mods. If you\'re unsure, this is the option you\'re looking for.')
+    .action(interactive_backup.run);
 
 program
     .command('archive <path>')

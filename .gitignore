@@ -99,3 +99,4 @@ fabric.properties
 *.iml
 
 archive
+.DS_Store
