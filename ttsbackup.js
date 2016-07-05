@@ -16,9 +16,14 @@ program.command('download <path>')
     .description('download all images, models, and the mod file needed to load in tts')
     .action(download.download);
 
+program.command('rewrite <path>')
+    .option('-r, --rewriteBaseUrl', 'The base url to rewrite across the mod file, e.g. https://dl.dropboxusercontent.com/u/12345/games')
+    .description('rewrite mod file at path with a given base url')
+    .action(rewriter.rewrite);
+
 program.command('list [options]')
     .description('list installed mods')
-    .option('-i, --input_file <path>', "The WorkshopFileInfos.json path. On OSX, this defaults to /Users/<user>/My Games/Tabletop Simulator/Mods/Workshop/WorkshopFileInfos.json")
+    .option('-w, --workshopFileInfosPath <path>', "The WorkshopFileInfos.json path. This defaults to " + mod_lister.defaultWorkshopInfosPath())
     .action(mod_lister.list);
 
 program.parse(process.argv);
