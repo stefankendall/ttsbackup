@@ -2,7 +2,9 @@ var program = require('commander');
 var download = require('./lib/commands/download');
 var rewriter = require('./lib/commands/rewrite');
 var mod_lister = require('./lib/commands/mod_lister');
+var mod_installer = require('./lib/commands/mod_installer');
 var interactive_backup = require('./lib/commands/interactive_backup');
+var workshop_helper = require('./lib/util/workshop_helper');
 
 program.version('0.0.0');
 
@@ -23,11 +25,16 @@ program.command('rewrite <path>')
 
 program.command('list [options]')
     .description('list installed mods')
-    .option('-w, --workshopFileInfosPath <path>', "The WorkshopFileInfos.json path. This defaults to " + mod_lister.defaultWorkshopInfosPath())
+    .option('-w, --workshopFileInfosPath <path>', "The WorkshopFileInfos.json path. This defaults to " + workshop_helper.defaultWorkshopInfosPath())
     .action(mod_lister.list);
+
+program.command('install <path>')
+    .option('-w, --workshopFileInfosPath <path>', "The WorkshopFileInfos.json path. This defaults to " + workshop_helper.defaultWorkshopInfosPath())
+    .description('install mod file at given path into your steam workshop')
+    .action(mod_installer.install);
 
 program.parse(process.argv);
 
 if (process.argv.length <= 2) {
-    program.help();
+    interactive_backup.run();
 }
