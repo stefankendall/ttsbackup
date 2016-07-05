@@ -11,16 +11,10 @@ program
     .description('interactively pick mods to backup to a particular location, create a mod file for tabletop simulator, and add to your installed mods. If you\'re unsure, this is the option you\'re looking for.')
     .action(interactive_backup.run);
 
-program
-    .command('download <path>')
+program.command('download <path>')
     .option('-c, --clean', 'removes all downloaded game files from archive/Game/Images, Models, and Workshop before starting the archive process')
     .description('download all images, models, and the mod file needed to load in tts')
     .action(download.download);
-
-program.command('rewrite <path>')
-    .description('rewrite urls in the provided mod json file')
-    .option('-b, --base_url <path>', 'the base url for all assets, e.g. https://dl.dropboxusercontent.com/u/5142994/games/MyGame')
-    .action(rewriter.rewrite);
 
 program.command('list [options]')
     .description('list installed mods')
