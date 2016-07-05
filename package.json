@@ -2,20 +2,20 @@
   "name": "ttsbackup",
   "version": "0.0.1",
   "description": "Backup Tabletop Simulator games from their json files",
-  "main": "ttsarchive.js",
+  "main": "ttsbackup.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stefankendall/ttsarchiver.git"
+    "url": "git+https://github.com/stefankendall/ttsbackup.git"
   },
   "author": "Stefan Kendall",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stefankendall/ttsarchiver/issues"
+    "url": "https://github.com/stefankendall/ttsbackup/issues"
   },
-  "homepage": "https://github.com/stefankendall/ttsarchiver#readme",
+  "homepage": "https://github.com/stefankendall/ttsbackup#readme",
   "dependencies": {
     "async": "^2.0.0-rc.6",
     "commander": "^2.9.0",
