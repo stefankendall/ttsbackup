@@ -2,6 +2,10 @@
   "name": "ttsbackup",
   "version": "0.0.1",
   "description": "Backup Tabletop Simulator games from their json files",
+  "preferGlobal": true,
+  "directories": {
+    "bin": "./bin"
+  },
   "main": "ttsbackup.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

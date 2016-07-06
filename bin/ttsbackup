@@ -1,11 +1,13 @@
+#!/usr/bin/env node
+
 var program = require('commander');
-var download = require('./lib/commands/download');
-var rewriter = require('./lib/commands/rewrite');
-var mod_lister = require('./lib/commands/mod_lister');
-var mod_installer = require('./lib/commands/mod_installer');
-var interactive_backup = require('./lib/commands/interactive_backup');
-var workshop_helper = require('./lib/util/workshop_helper');
-var mod_validator = require('./lib/commands/mod_validator');
+var download = require('./../lib/commands/download');
+var rewriter = require('./../lib/commands/rewrite');
+var mod_lister = require('./../lib/commands/mod_lister');
+var mod_installer = require('./../lib/commands/mod_installer');
+var interactive_backup = require('./../lib/commands/interactive_backup');
+var workshop_helper = require('./../lib/util/workshop_helper');
+var mod_validator = require('./../lib/commands/mod_validator');
 
 program.version('0.0.0');
 
