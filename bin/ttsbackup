@@ -17,22 +17,22 @@ program
     .action(interactive_backup.run);
 
 program.command('download <path>')
-    .option('-c, --clean', 'removes all downloaded game files from archive/Game/Images, Models, and Workshop before starting the archive process')
     .description('download all images, models, and the mod file needed to load in tts')
+    .option('-c, --clean', 'removes all downloaded game files from archive/Game/Images, Models, and Workshop before starting the archive process')
     .action(download.download);
 
 program.command('rewrite <path>')
-    .option('-r, --rewriteBaseUrl', 'The base url to rewrite across the mod file, e.g. https://dl.dropboxusercontent.com/u/12345/games')
     .description('rewrite mod file at path with a given base url')
+    .option('-r, --rewriteBaseUrl <rewriteBaseUrl>', 'The base url to rewrite across the mod file, e.g. https://dl.dropboxusercontent.com/u/12345/games')
     .action(rewriter.rewrite);
 
 program.command('list [options]')
     .description('list installed mods')
-    .option('-w, --workshopFileInfosPath <path>', "The WorkshopFileInfos.json path. This defaults to " + workshop_helper.defaultWorkshopInfosPath())
+    .option('-w, --workshopFileInfosPath <workshopFileInfosPath>', "The WorkshopFileInfos.json path. This defaults to " + workshop_helper.defaultWorkshopInfosPath())
     .action(mod_lister.list);
 
 program.command('install <path>')
-    .option('-w, --workshopFileInfosPath <path>', "The WorkshopFileInfos.json path. This defaults to " + workshop_helper.defaultWorkshopInfosPath())
+    .option('-w, --workshopFileInfosPath <workshopFileInfosPath>', "The WorkshopFileInfos.json path. This defaults to " + workshop_helper.defaultWorkshopInfosPath())
     .description('install mod file at given path into your steam workshop')
     .action(mod_installer.install);
 
