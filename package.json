@@ -1,7 +1,7 @@
 {
   "name": "ttsbackup",
   "version": "0.0.1",
-  "description": "Backup Tabletop Simulator games from their json files",
+  "description": "Backup Tabletop Simulator games from their mod files",
   "preferGlobal": true,
   "directories": {
     "bin": "./bin"
