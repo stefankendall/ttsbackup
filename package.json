@@ -28,6 +28,7 @@
     "lodash-deep": "^2.0.0",
     "mkdirp": "^0.5.1",
     "prompt": "^1.0.0",
-    "request": "^2.72.0"
+    "request": "^2.72.0",
+    "untildify": "^3.0.2"
   }
 }
