@@ -5,6 +5,7 @@ var mod_lister = require('./lib/commands/mod_lister');
 var mod_installer = require('./lib/commands/mod_installer');
 var interactive_backup = require('./lib/commands/interactive_backup');
 var workshop_helper = require('./lib/util/workshop_helper');
+var mod_validator = require('./lib/commands/mod_validator');
 
 program.version('0.0.0');
 
@@ -32,6 +33,10 @@ program.command('install <path>')
     .option('-w, --workshopFileInfosPath <path>', "The WorkshopFileInfos.json path. This defaults to " + workshop_helper.defaultWorkshopInfosPath())
     .description('install mod file at given path into your steam workshop')
     .action(mod_installer.install);
+
+program.command('validate <path>')
+    .description('validate that all urls in a mod file work')
+    .action(mod_validator.validate);
 
 program.parse(process.argv);
 
