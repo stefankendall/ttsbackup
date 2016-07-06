@@ -4,7 +4,7 @@
 
     npm install -g ttsbackup
     
-## Backup up mods
+## Backup mods
 
 After installation, run `ttsbackup`. Follow the on-screen prompts. Open up Tabletop Simulator, and your mod will appear as `<Original Mod Name> Backup`.
 
