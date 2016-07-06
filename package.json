@@ -1,6 +1,6 @@
 {
   "name": "ttsbackup",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Backup Tabletop Simulator games from their mod files",
   "preferGlobal": true,
   "directories": {
