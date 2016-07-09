@@ -1,5 +1,11 @@
 # Tabletop Simulator Backup
 
+This tool backs up Tabletop Simulator Mods by downloading and storing the mod file and all associated assets locally. Then, it lets you change all the URLs in the mod file to point to your copied files, hosted on dropbox or wherever else. Why would you want to do this? A few reasons.
+ 
+ 1. Lots of mods have images and assets hosted on limited or unreliable servers. Many games load images directly from imgur, pastebin, or someone's private dropbox. If any of those go down (like a popular mod hitting the dropbox cap), you can't play the mod.
+ 1. Mod authors can intentionally remove mods or delete assets. If they do that, it's gone.
+ 1. Hosting files yourself could make mod loading and sharing a lot faster depending on what host the mod author is using.
+
 ## Installation
 
     npm install -g ttsbackup
@@ -10,9 +16,9 @@ After installation, run `ttsbackup`. Follow the on-screen prompts. Open up Table
 
 ## Platform support
 
-I have not done any testing on Windows. If you find any issues, let me know.
+I've tested this on macos and windows. If you find any issues, let me know.
 
-## Example backup:
+## Example
 
     To find out which mods you have installed, we need to read WorkshopFileInfos.json in your TabletopSimulator mods directory
     WorkshopFileInfos.json path:  (/Users/stefankendall/My Games/Tabletop Simulator/Mods/Workshop/WorkshopFileInfos.json)
@@ -63,10 +69,6 @@ I need to wait a few seconds for the files to sync on dropbox, and when all file
     FAILED: 0
 
 Sweet! My mod is now fully backed up. When I play `Cool Custom Game Mod Backup` in Tabletop Simulator, I'm playing 100% from my own hosted files on dropbox.
-
-## Limitations
-
-I have only tested this with a few mods so far. Let me know if you run into any mods with issues.
 
 ### cjc support
 I only currently support mods that are saved with `.json` files. Most mods are stored with `.json` and not `.cjc` files. Let me know if there's a mod that won't import correctly, and I'll look at it.
