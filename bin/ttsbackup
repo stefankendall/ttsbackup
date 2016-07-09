@@ -30,7 +30,7 @@ program.command('rewrite <path>')
     .option('-r, --rewriteBaseUrl <rewriteBaseUrl>', 'The base url to rewrite across the mod file, e.g. https://dl.dropboxusercontent.com/u/12345/games')
     .action(rewriter.rewrite);
 
-program.command('list [options]')
+program.command('list')
     .description('list installed mods')
     .option('-w, --workshopFileInfosPath <workshopFileInfosPath>', "The WorkshopFileInfos.json path. This defaults to " + workshop_helper.defaultWorkshopInfosPath())
     .action(mod_lister.list);
