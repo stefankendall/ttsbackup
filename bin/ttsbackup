@@ -42,7 +42,7 @@ program.command('install <path>')
 
 program.command('validate <path>')
     .description('validate that all urls in a mod file work')
-    .action(mod_validator.validate);
+    .action(_.curryRight(mod_validator.validate)(_.identity));
 
 program.parse(process.argv);
 

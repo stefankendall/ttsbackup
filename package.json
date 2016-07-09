@@ -8,7 +8,7 @@
   },
   "main": "ttsbackup.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,9 @@
     "prompt": "^1.0.0",
     "request": "^2.72.0",
     "untildify": "^3.0.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
   }
 }
