@@ -8,6 +8,7 @@ var mod_installer = require('./../lib/commands/mod_installer');
 var interactive_backup = require('./../lib/commands/interactive_backup');
 var workshop_helper = require('./../lib/util/workshop_helper');
 var mod_validator = require('./../lib/commands/mod_validator');
+var _ = require('lodash');
 
 program.version('0.0.0');
 
@@ -19,7 +20,10 @@ program
 program.command('download <path>')
     .description('download all images, models, and the mod file needed to load in tts')
     .option('-c, --clean', 'removes all downloaded game files from archive/Game/Images, Models, and Workshop before starting the archive process')
-    .action(download.download);
+    .option('-o, --outputDir <outputDir>', 'path to save downloaded files')
+    .action(_.curryRight(download.download, 3)(function () {
+        console.log("Download complete!");
+    }));
 
 program.command('rewrite <path>')
     .description('rewrite mod file at path with a given base url')
