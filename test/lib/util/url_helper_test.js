@@ -8,4 +8,10 @@ describe('UrlHelper', function () {
             assert.equal(UrlHelper.removeSpecialSuffixesOnUrl("test?dl=1"), "test");
         });
     });
+
+    describe('#fileNameForUrl()', function(){
+        it('removes slashes at the end of urls', function(){
+           assert.equal(UrlHelper.fileNameForUrl('http://bob.com/1234/'), '1234');
+        });
+    });
 });
