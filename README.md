@@ -70,5 +70,4 @@ I need to wait a few seconds for the files to sync on dropbox, and when all file
 
 Sweet! My mod is now fully backed up. When I play `Cool Custom Game Mod Backup` in Tabletop Simulator, I'm playing 100% from my own hosted files on dropbox.
 
-### cjc support
-I only currently support mods that are saved with `.json` files. Most mods are stored with `.json` and not `.cjc` files. Let me know if there's a mod that won't import correctly, and I'll look at it.
+All of the paths that are entered will save for the next time I run `ttsbackup`, making the next backup much simpler. 
