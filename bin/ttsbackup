@@ -6,8 +6,9 @@ var rewriter = require('./../lib/commands/rewrite');
 var mod_lister = require('./../lib/commands/mod_lister');
 var mod_installer = require('./../lib/commands/mod_installer');
 var interactive_backup = require('./../lib/commands/interactive_backup');
-var workshop_helper = require('./../lib/util/workshop_helper');
+var recoverer = require('./../lib/commands/recoverer');
 var mod_validator = require('./../lib/commands/mod_validator');
+var WorkshopHelper = require('./../lib/util/workshop_helper');
 var _ = require('lodash');
 
 program.version('0.0.0');
@@ -16,6 +17,11 @@ program
     .command('backup')
     .description('interactively pick mods to backup to a particular location, create a mod file for tabletop simulator, and add to your installed mods. If you\'re unsure, this is the option you\'re looking for.')
     .action(interactive_backup.run);
+
+program
+    .command('recover')
+    .description('take a mod file that no long loads and point it to your own files')
+    .action(recoverer.run);
 
 program.command('download <path>')
     .description('download all images, models, and the mod file needed to load in tts')
@@ -32,11 +38,11 @@ program.command('rewrite <path>')
 
 program.command('list')
     .description('list installed mods')
-    .option('-w, --workshopFileInfosPath <workshopFileInfosPath>', "The WorkshopFileInfos.json path. This defaults to " + workshop_helper.defaultWorkshopInfosPath())
+    .option('-w, --workshopFileInfosPath <workshopFileInfosPath>', "The WorkshopFileInfos.json path. This defaults to " + WorkshopHelper.defaultWorkshopInfosPath())
     .action(mod_lister.list);
 
 program.command('install <path>')
-    .option('-w, --workshopFileInfosPath <workshopFileInfosPath>', "The WorkshopFileInfos.json path. This defaults to " + workshop_helper.defaultWorkshopInfosPath())
+    .option('-w, --workshopFileInfosPath <workshopFileInfosPath>', "The WorkshopFileInfos.json path. This defaults to " + WorkshopHelper.defaultWorkshopInfosPath())
     .description('install mod file at given path into your steam workshop')
     .action(mod_installer.install);
 
