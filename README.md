@@ -10,15 +10,11 @@ This tool backs up Tabletop Simulator Mods by downloading and storing the mod fi
 
     npm install -g ttsbackup
     
-## Backup mods
+## Backup mods still on the workshop
 
 After installation, run `ttsbackup`. Follow the on-screen prompts. Open up Tabletop Simulator, and your mod will appear as `<Original Mod Name> Backup`.
 
-## Platform support
-
-I've tested this on macos and windows. If you find any issues, let me know.
-
-## Example
+### Example
 
     To find out which mods you have installed, we need to read WorkshopFileInfos.json in your TabletopSimulator mods directory
     WorkshopFileInfos.json path:  (/Users/stefankendall/My Games/Tabletop Simulator/Mods/Workshop/WorkshopFileInfos.json)
@@ -70,4 +66,10 @@ I need to wait a few seconds for the files to sync on dropbox, and when all file
 
 Sweet! My mod is now fully backed up. When I play `Cool Custom Game Mod Backup` in Tabletop Simulator, I'm playing 100% from my own hosted files on dropbox.
 
-All of the paths that are entered will save for the next time I run `ttsbackup`, making the next backup much simpler. 
+All of the paths that are entered will save for the next time I run `ttsbackup`, making the next backup much simpler.
+ 
+## Backup mods that only exist locally
+
+Sometimes, mods get pulled before you can back them up. But that's okay! So long as you have all the mod resources locally, you should be able to recover the mod.
+
+To recover a mod that has been taken off the store, run `ttsbackup recover`. The process is similar to the main `ttsbackup` command documented above.
