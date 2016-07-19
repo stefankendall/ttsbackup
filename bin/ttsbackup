@@ -44,7 +44,7 @@ program.command('list')
 program.command('install <path>')
     .option('-w, --workshopFileInfosPath <workshopFileInfosPath>', "The WorkshopFileInfos.json path. This defaults to " + WorkshopHelper.defaultWorkshopInfosPath())
     .description('install mod file at given path into your steam workshop')
-    .action(mod_installer.install);
+    .action(_.curryRight(mod_installer.install)(_.identity));
 
 program.command('validate <path>')
     .description('validate that all urls in a mod file work')
