@@ -73,3 +73,7 @@ All of the paths that are entered will save for the next time I run `ttsbackup`,
 Sometimes, mods get pulled before you can back them up. But that's okay! So long as you have all the mod resources locally, you should be able to recover the mod.
 
 To recover a mod that has been taken off the store, run `ttsbackup recover`. The process is similar to the main `ttsbackup` command documented above.
+
+# Thanks!
+
+It's my hope that this tool helps keep mods alive. If you like ttsbackup and want to say thanks, I always appreciate [tips](https://www.paypal.me/stefankendall). 
