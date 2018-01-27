@@ -24,18 +24,18 @@
   },
   "homepage": "https://github.com/stefankendall/ttsbackup#readme",
   "dependencies": {
-    "async": "^2.0.0-rc.6",
-    "commander": "^2.9.0",
-    "glob": "^7.0.5",
-    "lodash": "^4.13.1",
-    "lodash-deep": "^2.0.0",
-    "mkdirp": "^0.5.1",
-    "prompt": "^1.0.0",
-    "request": "^2.72.0",
-    "untildify": "^3.0.2"
+    "async": "2.0.0-rc.6",
+    "commander": "2.13.0",
+    "glob": "7.0.5",
+    "lodash": "4.13.1",
+    "lodash-deep": "2.0.0",
+    "mkdirp": "0.5.1",
+    "prompt": "1.0.0",
+    "request": "2.83.0",
+    "untildify": "3.0.2"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^2.5.3"
+    "chai": "3.5.0",
+    "mocha": "2.5.3"
   }
 }
