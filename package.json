@@ -30,6 +30,7 @@
     "lodash": "4.13.1",
     "lodash-deep": "2.0.0",
     "mkdirp": "0.5.1",
+    "npm": "^5.6.0",
     "prompt": "1.0.0",
     "request": "2.83.0",
     "untildify": "3.0.2"
